@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1,
+        "body": "Hello, fellas!",
+        "type": "income"
+    }, {
+        "id": 2,
+        "body": "Hi!",
+        "type": "outcome"
+    }
+]

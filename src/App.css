@@ -49,6 +49,33 @@ html, body {
   padding: 20px 15px;
 
   background: rgba(0, 0, 0, 0.010);
+
+  overflow-y: scroll;
+
+}
+
+.Chatbox .Window::-webkit-scrollbar {
+  opacity: 0;
+  width: 5px;
+}
+
+.Chatbox .Window::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+.Chatbox .Window::-webkit-scrollbar-thumb {
+  background: rgba(249, 201, 70, 0);
+
+  transition: background 0.7s;
+  border-radius: 5px;
+}
+
+.Chatbox:hover .Window::-webkit-scrollbar-thumb {
+  background: rgba(249, 201, 70, 1);
+}
+
+.Chatbox .Window::-webkit-scrollbar-thumb:hover {
+  background: rgba(234, 189, 66, 1);
 }
 
 .Chatbox .Window:after {
@@ -83,6 +110,19 @@ html, body {
   padding: 5px 15px;
 }
 
+.Chatbox .Window .message .body.new {
+  transform: translateY(10px);
+  animation: 0.5s popup ease-out forwards;
+}
+
+@keyframes popup {
+  from {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
 .Chatbox .Window .message.income .body {
   background: #FFFFFF;
   color: #333333;
